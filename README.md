@@ -16,8 +16,11 @@ Visit:
 Request:
 ```aiignore
 {
-  "square_feet": 2200
-}
+  "square_feet": 1200,
+  "bedrooms": 2,
+  "bathrooms": 1.75,
+  "year_built": 2020
+
 ```
 
 Response:
