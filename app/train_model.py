@@ -1,10 +1,14 @@
 import joblib
-import numpy as np
+import pandas as pd
 from sklearn.linear_model import LinearRegression
 
+df = pd.read_csv('king_county_house_data.csv')
+df_params = df[['sqft_living', 'bedrooms', 'bathrooms', 'yr_built']]
+df_prices = df['price']
+
 # Dummy training data
-X = np.array([[1000], [1500], [2000], [2500], [3000]])  # square feet
-y = np.array([100000, 150000, 200000, 250000, 300000])  # price
+X = df_params.to_numpy()
+y = df_prices.to_numpy()
 
 model = LinearRegression()
 model.fit(X, y)
